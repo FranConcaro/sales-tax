@@ -1,1 +1,1 @@
-# salesTax
+# sales-tax
