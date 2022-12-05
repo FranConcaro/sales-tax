@@ -1,15 +1,12 @@
 require_relative "product"
 class Basket
-  def initialize(file)
-    @file_lines = File.readlines(file)
+  attr_accessor :products
+
+  def initialize
     @products = []
   end
 
-  def parse_input
-    @file_lines.each do |line|
-      @products << Product.new(line)
-    end
-
-    @products
+  def add(product)
+    @products << Product.new(product)
   end
 end

@@ -22,7 +22,7 @@ class Receipt
 
   def scan(basket)
     taxed_products = []
-    basket.each do |product|
+    basket.products.each do |product|
       taxed_products << @tax_calculator.calculate_taxes(product)
     end
   end
